@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    } 
+
+    .btn,
+    a.btn {
+    text-align: center;
+    text-decoration: none;
+    }
+
+    a.btn-rounded,
+    input[type="submit"].btn-rounded {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        padding: 35px 0;
+        border-radius: 50%;
+        background: #be3f32;
+        background: linear-gradient(to bottom, #d44b3e 0%, #be3f32 50%, #a2362a 100%);
+        box-shadow: inset 5px 20px 20px rgba(252, 251, 251, 0.548),0 6px 10px rgba(0, 0, 0, 0.2);
+        border: none;
+        position: relative;
+        transition: all 0.3s ease; /* スムーズに浮き上がる */
+        overflow: hidden;
+    }
+    .btn-rounded:hover,
+    input[type="submit"].btn-rounded:hover {
+        transform: translateY(-5px); /* ボタンを少し上に動かす */
+        box-shadow: inset 8px 18px 25px rgba(255, 255, 255, 0.6), 0 10px 20px rgba(0, 0, 0, 0.3); /* 影を強化 */
+    }
+
+    .btn-rounded1{
+        @extend .btn-rounded;
+        background: #6b2eb6;
+        background: linear-gradient(to bottom, #d44b3e 0%, #be3f32 50%, #a2362a 100%);
+    }

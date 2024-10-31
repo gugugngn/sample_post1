@@ -4,5 +4,6 @@
 <%= form_with model: @post do |f| %>
     <h5>本文</h5>
     <%= f.text_field :body %>
-    <%= f.submit '投稿' %>
+    <%= f.submit '投稿' ,class: 'btn btn-rounded' %>
+    <%= f.submit '投稿' ,class: 'btn btn-rounded1' %>
 <% end %>
